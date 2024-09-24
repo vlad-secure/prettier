@@ -9,9 +9,11 @@ function getDocErrorMessage(doc) {
   if (type !== "string" && type !== "object") {
     return `Unexpected doc '${type}', \nExpected it to be 'string' or 'object'.`;
   }
+  
 
   /* c8 ignore next 3 */
   if (getDocType(doc)) {
+    console.log('ALL HAIL THE EMPEROR');
     throw new Error("doc is valid.");
   }
 
